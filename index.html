@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Gift To Ruqia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div id="particles-js"></div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+    <button id="musicToggle" class="music-toggle hidden">
+        <span class="icon">🎵</span>
+    </button>
+
+    <!-- Intro Heart Overlay -->
+    <div id="introOverlay" class="intro-overlay">
+        <div class="intro-content">
+            <h2 class="intro-title">A Special Surprise To Ruqia...</h2>
+            <div id="growingHeart" class="growing-heart">❤️</div>
+            <p class="intro-hint">Click to grow!</p>
+        </div>
+    </div>
+
+    <main class="container blurred">
+        <header class="header">
+            <h1 class="fade-in">Something Special For You</h1>
+            <p class="subtitle fade-in-delay">Because you're one in a million...</p>
+        </header>
+
+        <section class="gift-section">
+            <div class="gift-grid">
+                <div class="gift-container">
+                    <div class="gift-box" id="giftBoxLetter" data-gift="letter">
+                        <div class="gift-lid"></div>
+                        <div class="gift-body"></div>
+                        <div class="gift-ribbon-v"></div>
+                        <div class="gift-ribbon-h"></div>
+                        <div class="gift-label">Birthday Letter</div>
+                    </div>
+                </div>
+                
+                <div class="gift-container">
+                    <div class="gift-box" id="giftBoxReasons" data-gift="reasons">
+                        <div class="gift-lid"></div>
+                        <div class="gift-body"></div>
+                        <div class="gift-ribbon-v"></div>
+                        <div class="gift-ribbon-h"></div>
+                        <div class="gift-label">Reasons Why</div>
+                    </div>
+                </div>
+
+                <div class="gift-container">
+                    <div class="gift-box" id="giftBoxBouquet" data-gift="bouquet">
+                        <div class="gift-lid"></div>
+                        <div class="gift-body"></div>
+                        <div class="gift-ribbon-v"></div>
+                        <div class="gift-ribbon-h"></div>
+                        <div class="gift-label">Digital Bouquet</div>
+                    </div>
+                </div>
+            </div>
+            <div class="click-me-prompt"></div>
+        </section>
+
+        <!-- Modals for contents -->
+        <div id="modalContainer" class="modal-container hidden">
+            <!-- Combined Birthday Letter -->
+            <div class="card" id="letterContent">
+                <h2 class="card-title">A Message To Ruqia</h2>
+                
+                <div id="envelope" class="envelope-wrapper">
+                    <div class="envelope-lid"></div>
+                    <div class="envelope-body"></div>
+                    <div class="envelope-seal">❤️</div>
+                </div>
+                <p class="letter-hint">Click the envelope to open your letter!</p>
+
+                <div class="card-body scroll-body">
+                    <h2 class="card-title">Happy Birthday! 🎂</h2>
+                    <div class="birthday-animation"></div>
+                    <img src="img1.png" alt="For the best girl" class="card-img">
+                    <p class="card-text">Dear Ruqia,</p>
+                    <p class="card-text">Every moment with you is like a beautiful dream come true. You bring so much light and joy into my life, and I just wanted to remind you how incredibly special you are to me.</p>
+                    <p class="card-text">I hope nothing but the best for you</p>
+                    <p class="card-text">May this year be as wonderful and bright as your smile. Wishing you the happiest birthday filled with all the love and joy you deserve!</p>
+                    <p class="card-text">Every word in this letter comes straight from my heart.</p>
+                    <p class="card-text">I wish we will be happy together in the future.</p>
+                    <p class="card-text">Good luck with everything and see you later 😉</p>
+                    <p class="card-text signature">Osama❤️</p>
+                </div>
+                <button class="close-btn btn">Close</button>
+            </div>
+
+            <!-- Reasons Why -->
+            <div class="card hidden" id="reasonsContent">
+                <h2 class="card-title">Reasons Why...</h2>
+                <div class="card-body scroll-body">
+                    <img src="img2.png" alt="Special moments" class="card-img">
+                    <ul class="reasons-list">
+                        <li class="reason-item">You have the most beautiful smile.</li>
+                        <li class="reason-item">You always know how to make me laugh.</li>
+                        <li class="reason-item">Your kindness knows no bounds.</li>
+                        <li class="reason-item">You inspire me to be a better person.</li>
+                        <li class="reason-item">You make me feel wanted.</li>
+                        <li class="reason-item">You're the only one i wants to be with</li>
+                        <li class="reason-item">Simply because you are YOU.</li>
+                    </ul>
+                </div>
+                <button class="close-btn btn">Close</button>
+            </div>
+
+            <!-- Bouquet -->
+            <div class="card hidden" id="bouquetContent">
+                <h2 class="card-title">A Bouquet For You</h2>
+                <img src="img3.png" alt="For you" class="card-img">
+                <div class="bouquet-container">
+                    <div class="flower flower-1" data-bloom="false">
+                        <div class="stem"></div>
+                        <div class="leaf leaf-1"></div>
+                        <div class="leaf leaf-2"></div>
+                        <div class="petals">
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                        </div>
+                        <div class="center"></div>
+                    </div>
+                    <div class="flower flower-2" data-bloom="false">
+                        <div class="stem"></div>
+                        <div class="leaf leaf-1"></div>
+                        <div class="leaf leaf-2"></div>
+                        <div class="petals">
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                        </div>
+                        <div class="center"></div>
+                    </div>
+                    <div class="flower flower-3" data-bloom="false">
+                        <div class="stem"></div>
+                        <div class="leaf leaf-1"></div>
+                        <div class="leaf leaf-2"></div>
+                        <div class="petals">
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                            <div class="petal"></div>
+                        </div>
+                        <div class="center"></div>
+                    </div>
+                </div>
+                <p class="card-text hint">Flowers for my beautiful girl 🌸</p>
+                <button class="close-btn btn">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
